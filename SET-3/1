@@ -1,0 +1,25 @@
+import random
+
+# Step 1: Create a list of 10 random integers between 1 and 100
+random_list = [random.randint(1, 100) for _ in range(10)]
+print("Original List:", random_list)
+
+# Step 2a: Find the second largest and second smallest numbers
+sorted_list = sorted(random_list)
+second_smallest = sorted_list[1]
+second_largest = sorted_list[-2]
+print("Second Smallest:", second_smallest)
+print("Second Largest:", second_largest)
+
+# Step 2b: Separate numbers into even and odd lists
+even_numbers = [num for num in random_list if num % 2 == 0]
+odd_numbers = [num for num in random_list if num % 2 != 0]
+print("Even Numbers:", even_numbers)
+print("Odd Numbers:", odd_numbers)
+
+# Step 2c: Sort both lists in descending order
+even_numbers_sorted = sorted(even_numbers, reverse=True)
+odd_numbers_sorted = sorted(odd_numbers, reverse=True)
+print("Even Numbers (Descending):", even_numbers_sorted)
+print("Odd Numbers (Descending):", odd_numbers_sorted)
+
